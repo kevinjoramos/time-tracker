@@ -1,11 +1,10 @@
 import swaggerAutogen from 'swagger-autogen';
 const doc = {
     info: {
-        openapi: "3.0.0",
         title: 'Time Tracker API',
         description: 'Track the time you spend.',
     },
-    host: 'https://time-tracker-591z.onrender.com',
+    host: 'time-tracker-591z.onrender.com',
     schemes: ['http', 'https'],
 };
 

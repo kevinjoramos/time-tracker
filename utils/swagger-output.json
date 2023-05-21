@@ -1,12 +1,11 @@
 {
   "swagger": "2.0",
   "info": {
-    "swagger": "2.0",
     "title": "Time Tracker API",
     "description": "Track the time you spend.",
     "version": "1.0.0"
   },
-  "host": "https://time-tracker-591z.onrender.com",
+  "host": "time-tracker-591z.onrender.com",
   "basePath": "/",
   "schemes": [
     "http",
