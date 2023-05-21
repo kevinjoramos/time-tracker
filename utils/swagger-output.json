@@ -41,22 +41,25 @@
             "schema": {
               "type": "object",
               "properties": {
-                "_id": {
+                "user_id": {
                   "example": "any"
                 },
-                "firstName": {
+                "categoryName": {
                   "example": "any"
                 },
-                "lastName": {
+                "color": {
                   "example": "any"
                 },
-                "email": {
+                "hoursLogged": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "minutesLogged": {
                   "example": "any"
                 },
-                "birthday": {
+                "isRunning": {
+                  "example": "any"
+                },
+                "timeToggled": {
                   "example": "any"
                 }
               }
