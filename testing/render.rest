@@ -1,0 +1,49 @@
+GET http://localhost:8080/timers
+
+###
+
+POST http://localhost:8080/timers
+Content-Type: application/json
+
+{
+  "user_id": "646999900e8611c546890db2",
+  "categoryName": "Senior Project",
+  "color": "Blue",
+  "hoursLogged": 0,
+  "minutesLogged": 0,
+  "isRunning": false,
+  "timeToggled": "2023-05-21T05:32:53.682Z"
+}
+
+###
+
+POST http://localhost:8080/timers
+Content-Type: application/json
+
+{
+  "user_id": "646999900e8611c546890db2",
+  "categoryName": "Sleep",
+  "color": "Blue",
+  "hoursLogged": 0,
+  "minutesLogged": 0,
+  "isRunning": false,
+  "timeToggled": "2023-05-21T05:32:53.682Z"
+}
+
+###
+
+POST http://localhost:8080/timers
+Content-Type: application/json
+
+{
+  "user_id": "646999900e8611c546890db2",
+  "categoryName": "Homework",
+  "color": "Blue",
+  "hoursLogged": 0,
+  "minutesLogged": 0,
+  "isRunning": false,
+  "timeToggled": "2023-05-21T05:32:53.682Z"
+}
+
+###
+
