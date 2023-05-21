@@ -1,4 +1,5 @@
 import express, {Request,Response,Application} from 'express';
+import {collections} from "./database/connection.js";
 
 const app: Application = express();
 const PORT = 8080;
