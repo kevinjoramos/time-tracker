@@ -9,7 +9,8 @@
   "host": "https://time-tracker-591z.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "http",
+    "https"
   ],
   "paths": {
     "/api-docs": {

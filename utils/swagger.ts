@@ -1,6 +1,7 @@
 import swaggerAutogen from 'swagger-autogen';
 const doc = {
     info: {
+        swagger: "2.0",
         title: 'Time Tracker API',
         description: 'Track the time you spend.',
     },
