@@ -1,13 +1,19 @@
-import express, {Request,Response,Application} from 'express';
-import {collections} from "./database/connection.js";
+import express from 'express';
+import {connectToDatabase} from "./database/connection.js";
+import {router} from "./routes/router.js"
 
-const app: Application = express();
+const app: express.Application = express();
 const PORT = 8080;
 
-app.get("/", (req: Request, res: Response): void => {
-    res.send("Hello Node.js coming at you with Typescript!")
-});
+connectToDatabase()
+    .then(() => {
+        app.use("/", router);
 
-app.listen(PORT, (): void => {
-    console.log(`Server running on port ${PORT}/`)
-})
+        app.listen(PORT, () => {
+            console.log(`Server started at http://localhost:${PORT}`);
+        });
+    })
+    .catch((error: Error) => {
+        console.error("Database connection failed", error);
+        process.exit();
+    });
