@@ -1,8 +1,8 @@
-GET http://localhost:8080/timers
+GET https://time-tracker-591z.onrender.com/timers
 
 ###
 
-POST http://localhost:8080/timers
+POST https://time-tracker-591z.onrender.com/timers
 Content-Type: application/json
 
 {
@@ -17,7 +17,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:8080/timers
+POST https://time-tracker-591z.onrender.com/timers
 Content-Type: application/json
 
 {
@@ -32,7 +32,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:8080/timers
+POST https://time-tracker-591z.onrender.com/timers
 Content-Type: application/json
 
 {
