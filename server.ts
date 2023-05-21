@@ -7,7 +7,7 @@ const PORT = 8080;
 
 connectToDatabase()
     .then(() => {
-        app.use("/", router);
+        app.use("/timers", router);
 
         app.listen(PORT, () => {
             console.log(`Server started at http://localhost:${PORT}`);
