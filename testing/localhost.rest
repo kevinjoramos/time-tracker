@@ -2,7 +2,7 @@ GET http://localhost:8080/timers
 
 ###
 
-POST http://localhost:8080/timers
+POST http://localhost:8080/timer
 Content-Type: application/json
 
 {
@@ -17,7 +17,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:8080/timers
+POST http://localhost:8080/timer
 Content-Type: application/json
 
 {
@@ -32,7 +32,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:8080/timers
+POST http://localhost:8080/timer
 Content-Type: application/json
 
 {
@@ -42,8 +42,41 @@ Content-Type: application/json
   "hoursLogged": 0,
   "minutesLogged": 0,
   "isRunning": false,
+  "timeToggled": "2023-05-21T05:32:53.682Z",
+  "_id": "646c344f73cd3ce246cf5616"
+}
+
+###
+
+PUT http://localhost:8080/timer/646c344f73cd3ce246cf5616
+Content-Type: application/json
+
+{
+  "user_id": "646999900e8611c546890db2",
+  "categoryName": "Homework",
+  "color": "Blue",
+  "hoursLogged": 10,
+  "minutesLogged": 10,
+  "isRunning": false,
   "timeToggled": "2023-05-21T05:32:53.682Z"
 }
 
 ###
+
+PUT http://localhost:8080/timer/646999900e8611c546890db2
+Content-Type: application/json
+
+{
+"user_id": "646999900e8611c546890db2",
+"categoryName": "Homework",
+"color": "Blue",
+"hoursLogged": 0,
+"minutesLogged": 0,
+"isRunning": false,
+"timeToggled": "2023-05-22T05:32:53.682Z"
+}
+
+###
+
+DELETE http://localhost:8080/timer/646c344f73cd3ce246cf5616
 

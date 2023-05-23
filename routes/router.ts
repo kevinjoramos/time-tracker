@@ -1,5 +1,5 @@
 import express from "express";
-import {listAllTimers, createNewTimer} from "../controllers/timers.js";
+import {listAllTimers, createNewTimer, editTimer, deleteTimer} from "../controllers/timers.js";
 import swaggerUi from 'swagger-ui-express'
 import swaggerDocument from "../utils/swagger-output.json" assert { type: "json"}
 import bodyParser from "body-parser";
@@ -13,5 +13,8 @@ router.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
 router.get("/timers", listAllTimers);
 
-router.post("/timers", createNewTimer);
+router.post("/timer", createNewTimer);
 
+router.put("/timer/:id", editTimer);
+
+router.delete("/timer/:id", deleteTimer)
