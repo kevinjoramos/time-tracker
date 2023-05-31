@@ -8,7 +8,7 @@ export default class Timer {
         public hoursLogged: number,
         public minutesLogged: number,
         public isRunning: boolean,
-        public timeToggled: Date,
+        public lastToggled: Date | null,
         public _id?: ObjectId,
     ) {}
 }

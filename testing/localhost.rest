@@ -1,4 +1,9 @@
 GET http://localhost:8080/timers
+Content-Type: application/json
+
+{
+  "user_id": "646999900e8611c546890db2"
+}
 
 ###
 
@@ -8,11 +13,7 @@ Content-Type: application/json
 {
   "user_id": "646999900e8611c546890db2",
   "categoryName": "Senior Project",
-  "color": "Blue",
-  "hoursLogged": 0,
-  "minutesLogged": 0,
-  "isRunning": false,
-  "timeToggled": "2023-05-21T05:32:53.682Z"
+  "color": "#0000FF"
 }
 
 ###
@@ -23,11 +24,7 @@ Content-Type: application/json
 {
   "user_id": "646999900e8611c546890db2",
   "categoryName": "Sleep",
-  "color": "Blue",
-  "hoursLogged": 0,
-  "minutesLogged": 0,
-  "isRunning": false,
-  "timeToggled": "2023-05-21T05:32:53.682Z"
+  "color": "#0000FF"
 }
 
 ###
@@ -38,12 +35,7 @@ Content-Type: application/json
 {
   "user_id": "646999900e8611c546890db2",
   "categoryName": "Homework",
-  "color": "Blue",
-  "hoursLogged": 0,
-  "minutesLogged": 0,
-  "isRunning": false,
-  "timeToggled": "2023-05-21T05:32:53.682Z",
-  "_id": "646c344f73cd3ce246cf5616"
+  "color": "#0000FF"
 }
 
 ###
@@ -54,29 +46,33 @@ Content-Type: application/json
 {
   "user_id": "646999900e8611c546890db2",
   "categoryName": "Homework",
-  "color": "Blue",
+  "color": "#0000FF",
   "hoursLogged": 10,
   "minutesLogged": 10,
   "isRunning": false,
-  "timeToggled": "2023-05-21T05:32:53.682Z"
+  "lastToggled": "2023-05-21T05:32:53.682Z"
 }
 
 ###
 
-PUT http://localhost:8080/timer/646999900e8611c546890db2
+PUT http://localhost:8080/timer/646c344f73cd3ce246cf5616
 Content-Type: application/json
 
 {
 "user_id": "646999900e8611c546890db2",
 "categoryName": "Homework",
-"color": "Blue",
+"color": "#0000FF",
 "hoursLogged": 0,
 "minutesLogged": 0,
 "isRunning": false,
-"timeToggled": "2023-05-22T05:32:53.682Z"
+"lastToggled": "2023-05-22T05:32:53.682Z"
 }
 
 ###
 
-DELETE http://localhost:8080/timer/646c344f73cd3ce246cf5616
+DELETE http://localhost:8080/timer/6476cee8ad3c55ec6fda54f5
+Content-Type: application/json
 
+{
+  "user_id": "6476ceeaad3c55ec6fda54f6"
+}

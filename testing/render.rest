@@ -38,7 +38,7 @@ Content-Type: application/json
 
 {
   "user_id": "646999900e8611c546890db2",
-  "categoryName": "Homework",
+  "categoryName": "",
   "color": "Blue",
   "hoursLogged": 0,
   "minutesLogged": 0,

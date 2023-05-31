@@ -15,7 +15,17 @@ export const listAllTimers = async (_request: Request, response: Response) => {
 
 export const createNewTimer = async (request: Request, response: Response) => {
     try {
-        const newTimer= request.body as Timer;
+
+        const newTimer = new Timer(
+            new ObjectId(request.body["user_id"]),
+            request.body["categoryName"],
+            request.body["color"],
+            0,
+            0,
+            false,
+            null
+        )
+
         const result = await collections.timers.insertOne(newTimer);
 
         result

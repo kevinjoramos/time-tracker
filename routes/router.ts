@@ -2,19 +2,25 @@ import express from "express";
 import {listAllTimers, createNewTimer, editTimer, deleteTimer} from "../controllers/timers.js";
 import swaggerUi from 'swagger-ui-express'
 import swaggerDocument from "../utils/swagger-output.json" assert { type: "json"}
+import {
+    createTimerSchema,
+    deleteTimerSchema,
+    getTimerSchema,
+    updateTimerSchema,
+    validateTimer
+} from "../validation/validation.js";
 import bodyParser from "body-parser";
 
 export const router = express.Router();
 
 router.use(bodyParser.json())
 router.use('/api-docs', swaggerUi.serve);
-
 router.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
-router.get("/timers", listAllTimers);
+router.get("/timers", validateTimer(getTimerSchema), listAllTimers);
 
-router.post("/timer", createNewTimer);
+router.post("/timer", validateTimer(createTimerSchema), createNewTimer);
 
-router.put("/timer/:id", editTimer);
+router.put("/timer/:id", validateTimer(updateTimerSchema) , editTimer);
 
-router.delete("/timer/:id", deleteTimer)
+router.delete("/timer/:id", validateTimer(deleteTimerSchema), deleteTimer)
