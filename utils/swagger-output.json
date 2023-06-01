@@ -8,14 +8,34 @@
   "host": "time-tracker-591z.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http",
-    "https"
+    "https",
+    "http"
   ],
   "paths": {
-    "/timers": {
+    "/api-docs": {
       "get": {
         "description": "",
         "parameters": [],
+        "responses": {}
+      }
+    },
+    "/timers": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "user_id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "201": {
             "description": "Created"
@@ -32,7 +52,26 @@
     "/timer": {
       "post": {
         "description": "",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "user_id": {
+                  "example": "any"
+                },
+                "categoryName": {
+                  "example": "any"
+                },
+                "color": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "201": {
             "description": "Created"
@@ -58,6 +97,36 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "user_id": {
+                  "example": "any"
+                },
+                "categoryName": {
+                  "example": "any"
+                },
+                "color": {
+                  "example": "any"
+                },
+                "hoursLogged": {
+                  "example": "any"
+                },
+                "minutesLogged": {
+                  "example": "any"
+                },
+                "isRunning": {
+                  "example": "any"
+                },
+                "timeToggled": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
@@ -83,6 +152,18 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "user_id": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
