@@ -30,7 +30,7 @@
               "type": "object",
               "properties": {
                 "user_id": {
-                  "example": "any"
+                  "example": "646999900e8611c546890db2"
                 }
               }
             }
@@ -60,13 +60,13 @@
               "type": "object",
               "properties": {
                 "user_id": {
-                  "example": "any"
+                  "example": "646999900e8611c546890db2"
                 },
                 "categoryName": {
-                  "example": "any"
+                  "example": "Homework"
                 },
                 "color": {
-                  "example": "any"
+                  "example": "#0000FF"
                 }
               }
             }
@@ -105,25 +105,25 @@
               "type": "object",
               "properties": {
                 "user_id": {
-                  "example": "any"
+                  "example": "646999900e8611c546890db2"
                 },
                 "categoryName": {
-                  "example": "any"
+                  "example": "Homework"
                 },
                 "color": {
-                  "example": "any"
+                  "example": "#0000FF"
                 },
                 "hoursLogged": {
-                  "example": "any"
+                  "example": 10
                 },
                 "minutesLogged": {
-                  "example": "any"
+                  "example": 10
                 },
                 "isRunning": {
-                  "example": "any"
+                  "example": false
                 },
                 "timeToggled": {
-                  "example": "any"
+                  "example": "2023-05-21T05:32:53.682Z"
                 }
               }
             }
@@ -160,7 +160,7 @@
               "type": "object",
               "properties": {
                 "user_id": {
-                  "example": "any"
+                  "example": "646999900e8611c546890db2"
                 }
               }
             }
