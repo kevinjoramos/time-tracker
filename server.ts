@@ -1,9 +1,8 @@
 import express, {Request, Response, NextFunction} from 'express';
 import {connectToDatabase} from "./database/connection.js";
 import {router} from "./routes/router.js";
-import * from "./authentication.js";
-import passport from "passport";
-import session from "express-session"
+import "./authentication.js"
+
 
 
 
