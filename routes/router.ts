@@ -21,10 +21,10 @@ router.get("/auth/google", passport.authenticate('google', {scope: ['email', 'pr
 
 router.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
-router.get("/timers", validateTimer(getTimerSchema), listAllTimers);
+router.get("/timers/:userId", listAllTimers);
 
 router.post("/timer", validateTimer(createTimerSchema), createNewTimer);
 
 router.put("/timer/:id", validateTimer(updateTimerSchema) , editTimer);
 
-router.delete("/timer/:id", validateTimer(deleteTimerSchema), deleteTimer)
+router.delete("/timer/:id", deleteTimer)

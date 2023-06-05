@@ -53,7 +53,7 @@ export const updateTimerSchema = Joi.object({
 })
 
 export const deleteTimerSchema = Joi.object({
-    user_id: Joi
+    timer_id: Joi
         .string()
         .pattern(objectIdRegExp)
         .error(() => "Must be a valid objectId")

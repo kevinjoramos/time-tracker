@@ -3,9 +3,11 @@ import {collections} from "../database/connection.js";
 import Timer from "../models/timer.js";
 import {ObjectId} from "mongodb";
 
-export const listAllTimers = async (_request: Request, response: Response) => {
+export const listAllTimers = async (request: Request, response: Response) => {
+    const user_id = request?.params?.userId
+
     try {
-        const timers = (await collections.timers.find({}).toArray()) as Timer[];
+        const timers = (await collections.timers.find({user_id: new ObjectId(user_id)}).toArray()) as Timer[];
 
         response.status(201).send(timers);
     } catch (error) {

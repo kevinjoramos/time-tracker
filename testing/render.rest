@@ -1,10 +1,6 @@
 
-GET https://time-tracker-591z.onrender.com/timers
+GET https://time-tracker-591z.onrender.com/timers/646999900e8611c546890db2
 Content-Type: application/json
-
-{
-  "user_id": "646999900e8611c546890db2"
-}
 
 ###
 

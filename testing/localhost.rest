@@ -1,9 +1,4 @@
-GET http://localhost:8080/timers
-Content-Type: application/json
-
-{
-  "user_id": "646999900e8611c546890db2"
-}
+GET http://localhost:8080/timers/646999900e8611c546890db2
 
 ###
 
@@ -70,9 +65,5 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:8080/timer/6476cee8ad3c55ec6fda54f5
+DELETE http://localhost:8080/timer/647d6c4eae1f7f676bf22fec
 Content-Type: application/json
-
-{
-  "user_id": "6476ceeaad3c55ec6fda54f6"
-}
