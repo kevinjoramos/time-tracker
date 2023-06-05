@@ -10,11 +10,15 @@ import {
     validateTimer
 } from "../validation/validation.js";
 import bodyParser from "body-parser";
+import passport from "passport";
 
 export const router = express.Router();
 
 router.use(bodyParser.json())
 router.use('/api-docs', swaggerUi.serve);
+
+router.get("/auth/google", passport.authenticate('google', {scope: ['email', 'profile']}))
+
 router.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
 router.get("/timers", validateTimer(getTimerSchema), listAllTimers);

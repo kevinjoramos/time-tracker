@@ -8,7 +8,6 @@ const reportsCollectionName: string = "reports"
 export const collections: {
     users?: mongoDB.Collection,
     timers?: mongoDB.Collection,
-    reports?: mongoDB.Collection
 } = {}
 
 export async function connectToDatabase () {
@@ -22,11 +21,9 @@ export async function connectToDatabase () {
 
     collections.users = db.collection(usersCollectionName)
     collections.timers = db.collection(timersCollectionName)
-    collections.reports = db.collection(reportsCollectionName)
 
     console.log(`Successfully connected to database: ${db.databaseName} and collections: 
-        \n\t${collections.users.collectionName}
-        \n\t${collections.timers.collectionName}
-        \n\t${collections.reports.collectionName}
+        -\t${collections.users.collectionName}
+        -\t${collections.timers.collectionName}
     `);
 }
