@@ -19,21 +19,15 @@
         "responses": {}
       }
     },
-    "/timers": {
+    "/timers/{userId}": {
       "get": {
         "description": "",
         "parameters": [
           {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "user_id": {
-                  "example": "646999900e8611c546890db2"
-                }
-              }
-            }
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -153,18 +147,6 @@
             "required": true,
             "type": "string"
           },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "user_id": {
-                  "example": "646999900e8611c546890db2"
-                }
-              }
-            }
-          }
         ],
         "responses": {
           "202": {
