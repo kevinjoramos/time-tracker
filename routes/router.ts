@@ -4,27 +4,30 @@ import swaggerUi from 'swagger-ui-express'
 import swaggerDocument from "../utils/swagger-output.json" assert { type: "json"}
 import {
     createTimerSchema,
-    deleteTimerSchema,
-    getTimerSchema,
     updateTimerSchema,
     validateTimer
 } from "../validation/validation.js";
 import bodyParser from "body-parser";
-import passport from "passport";
+import {authenticateUser, logoutUser, redirectAuthentication, verifyLoggedIn} from "../controllers/authentication.js";
+
 
 export const router = express.Router();
 
 router.use(bodyParser.json())
 router.use('/api-docs', swaggerUi.serve);
 
-router.get("/auth/google", passport.authenticate('google', {scope: ['email', 'profile']}))
+router.get("/auth/google", authenticateUser)
+
+router.get("/auth/google/callback", redirectAuthentication)
+
+router.get("/auth/logout", logoutUser)
 
 router.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
-router.get("/timers/:userId", listAllTimers);
+router.get("/timers", verifyLoggedIn, listAllTimers);
 
-router.post("/timer", validateTimer(createTimerSchema), createNewTimer);
+router.post("/timer", verifyLoggedIn, validateTimer(createTimerSchema), createNewTimer);
 
-router.put("/timer/:id", validateTimer(updateTimerSchema) , editTimer);
+router.put("/timer/:id", verifyLoggedIn, validateTimer(updateTimerSchema) , editTimer);
 
-router.delete("/timer/:id", deleteTimer)
+router.delete("/timer/:id", verifyLoggedIn, deleteTimer)

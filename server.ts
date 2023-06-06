@@ -2,6 +2,8 @@ import express, {Request, Response, NextFunction} from 'express';
 import {connectToDatabase} from "./database/connection.js";
 import {router} from "./routes/router.js";
 import "./authentication.js"
+import session from "express-session"
+import passport from "passport";
 
 
 
@@ -24,7 +26,9 @@ connectToDatabase()
             next();
         })
 
-
+        app.use(session({secret: "cats"}))
+        app.use(passport.initialize())
+        app.use(passport.session())
 
         app.use("/", router);
 
