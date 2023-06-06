@@ -2,6 +2,7 @@ import passport from "passport";
 import passportGoogle from "passport-google-oauth20"
 const GoogleStrategy = passportGoogle.Strategy;
 import * as dotenv from "dotenv";
+import User from "../models/user.js";
 
 dotenv.config()
 
@@ -11,7 +12,13 @@ passport.use(new GoogleStrategy({
         callbackURL: "http://localhost:8080/auth/google/callback",
         passReqToCallback: true
     },
-    function(request, accessToken, refreshToken, profile, done) {
+    async (request, accessToken, refreshToken, profile, done) => {
+        const user = new User(
+            profile.username,
+            profile.emails.map(email => email.value),
+            profile.id
+        )
+
         /*User.findOrCreate({ googleId: profile.id }, function (err, user) {
             return done(err, user);
         });*/
