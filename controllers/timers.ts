@@ -4,15 +4,17 @@ import Timer from "../models/timer.js";
 import {ObjectId} from "mongodb";
 
 export const listAllTimers = async (request: Request, response: Response) => {
-    const user_id = request?.params?.userId
+    const user_id = request?.user
 
-    try {
+    response.json(user_id)
+
+    /*try {
         const timers = (await collections.timers.find({user_id: new ObjectId(user_id)}).toArray()) as Timer[];
 
         response.status(201).send(timers);
     } catch (error) {
         response.status(500).send(error.message);
-    }
+    }*/
 }
 
 export const createNewTimer = async (request: Request, response: Response) => {

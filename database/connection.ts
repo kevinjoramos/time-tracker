@@ -3,7 +3,6 @@ import * as dotenv from "dotenv";
 
 const usersCollectionName: string = "users"
 const timersCollectionName: string = "timers"
-const reportsCollectionName: string = "reports"
 
 export const collections: {
     users?: mongoDB.Collection,
