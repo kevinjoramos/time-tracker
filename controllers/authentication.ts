@@ -1,5 +1,4 @@
 import {NextFunction, Request, Response} from "express";
-import session from "express-session"
 import passport from "passport";
 
 export const authenticateUser = passport.authenticate('google', {scope: ['email', 'profile']})

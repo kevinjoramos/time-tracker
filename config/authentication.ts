@@ -7,11 +7,11 @@ import {collections} from "../database/connection.js";
 
 dotenv.config()
 
-passport.serializeUser((user: User, done) => {
+passport.serializeUser((user: any, done) => {
     done(null, user._id)
 })
 
-passport.deserializeUser((user_id, done) => {
+passport.deserializeUser((user_id: string, done) => {
     done(null, user_id)
 })
 
