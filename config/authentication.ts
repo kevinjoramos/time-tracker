@@ -20,7 +20,7 @@ passport.use(<passport.Strategy>new GoogleStrategy({
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         // FOR TESTING callbackURL: "http://localhost:8080/auth/google/callback",
-        callbackURL: "https://time-tracker-591z.onrender.com/auth/google",
+        callbackURL: "https://time-tracker-591z.onrender.com/auth/google/callback",
         passReqToCallback: true
     },
     async (request, accessToken, refreshToken, profile, done) => {
