@@ -3,7 +3,7 @@ import {listAllTimers, createNewTimer, editTimer, deleteTimer} from "../controll
 import swaggerUi from 'swagger-ui-express'
 import swaggerDocument from "../utils/swagger-output.json" assert { type: "json"}
 import {
-    createTimerSchema,
+    createTimerSchema, deleteTimerSchema,
     updateTimerSchema,
     validateTimer
 } from "../validation/validation.js";
@@ -30,4 +30,4 @@ router.post("/new-timer", verifyLoggedIn, validateTimer(createTimerSchema), crea
 
 router.put("/timer/:id", verifyLoggedIn, validateTimer(updateTimerSchema) , editTimer);
 
-router.delete("/timer/:id", verifyLoggedIn, deleteTimer)
+router.delete("/timer/:id", verifyLoggedIn, validateTimer(deleteTimerSchema), deleteTimer)
