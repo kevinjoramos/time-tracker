@@ -4,18 +4,7 @@ import {Request, Response, NextFunction} from "express";
 const objectIdRegExp = /^[a-f\d]{24}$/i
 const hexColorRegExp = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/
 
-export const getTimerSchema = Joi.object({
-    user_id: Joi
-        .string()
-        .pattern(objectIdRegExp)
-        .required()
-})
-
 export const createTimerSchema = Joi.object({
-    user_id: Joi
-        .string()
-        .pattern(objectIdRegExp)
-        .required(),
     categoryName: Joi
         .string()
         .min(1)
@@ -28,9 +17,6 @@ export const createTimerSchema = Joi.object({
 })
 
 export const updateTimerSchema = Joi.object({
-    user_id: Joi
-        .string()
-        .pattern(objectIdRegExp),
     categoryName: Joi
         .string()
         .min(1)

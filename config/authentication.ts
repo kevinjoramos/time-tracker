@@ -1,18 +1,19 @@
 import passport from "passport";
 import passportGoogle from "passport-google-oauth20"
-const GoogleStrategy = passportGoogle.Strategy;
 import * as dotenv from "dotenv";
 import User from "../models/user.js";
 import {collections} from "../database/connection.js";
 
+const GoogleStrategy = passportGoogle.Strategy;
+
 dotenv.config()
 
-passport.serializeUser((user: any, done) => {
-    done(null, user._id)
+passport.serializeUser((user, done) => {
+    done(null, user)
 })
 
-passport.deserializeUser((user_id: string, done) => {
-    done(null, user_id)
+passport.deserializeUser((user, done) => {
+    done(null, user)
 })
 
 passport.use(<passport.Strategy>new GoogleStrategy({
@@ -24,20 +25,21 @@ passport.use(<passport.Strategy>new GoogleStrategy({
     async (request, accessToken, refreshToken, profile, done) => {
 
         const user = new User(
-            profile.username,
+            profile.name,
             profile.emails.map(email => email.value),
             profile.id
         )
 
-        const authenticatedUser = await collections.users.findOneAndReplace(
-            {googleId: user.googleId},
-            user,
-            {
-                upsert: true,
-                returnDocument: "after"
-            }
-        )
+        const databaseUserDocument = await collections.users.findOne({googleId: profile.id})
 
-        done(null, authenticatedUser)
+        if (databaseUserDocument) {
+            console.log(databaseUserDocument)
+            done(null, databaseUserDocument)
+        } else {
+            const authenticatedUser = await collections.users.insertOne(user)
+            done(null, authenticatedUser)
+        }
+
+
     }
 ));

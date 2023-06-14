@@ -1,34 +1,35 @@
-GET http://localhost:8080/timers/646999900e8611c546890db2
+GET http://localhost:8080/timers/
+Cookie: connect.sid=s%3At3LNKCuuw4ex9kaxiKJWAN7_5e0wtjhW.hfW6IP%2BeKBI5zFVcWAnsABFwT2U34VEmEXEC18mKlmE
 
 ###
 
-POST http://localhost:8080/timer
+POST http://localhost:8080/new-timer
 Content-Type: application/json
+Cookie: connect.sid=s%3At3LNKCuuw4ex9kaxiKJWAN7_5e0wtjhW.hfW6IP%2BeKBI5zFVcWAnsABFwT2U34VEmEXEC18mKlmE
 
 {
-  "user_id": "646999900e8611c546890db2",
   "categoryName": "Senior Project",
   "color": "#0000FF"
 }
 
 ###
 
-POST http://localhost:8080/timer
+POST http://localhost:8080/new-timer
 Content-Type: application/json
+Cookie: connect.sid=s%3At3LNKCuuw4ex9kaxiKJWAN7_5e0wtjhW.hfW6IP%2BeKBI5zFVcWAnsABFwT2U34VEmEXEC18mKlmE
 
 {
-  "user_id": "646999900e8611c546890db2",
   "categoryName": "Sleep",
   "color": "#0000FF"
 }
 
 ###
 
-POST http://localhost:8080/timer
+POST http://localhost:8080/new-timer
 Content-Type: application/json
+Cookie: connect.sid=s%3At3LNKCuuw4ex9kaxiKJWAN7_5e0wtjhW.hfW6IP%2BeKBI5zFVcWAnsABFwT2U34VEmEXEC18mKlmE
 
 {
-  "user_id": "646999900e8611c546890db2",
   "categoryName": "Homework",
   "color": "#0000FF"
 }
@@ -37,9 +38,9 @@ Content-Type: application/json
 
 PUT http://localhost:8080/timer/646c344f73cd3ce246cf5616
 Content-Type: application/json
+Cookie: connect.sid=s%3At3LNKCuuw4ex9kaxiKJWAN7_5e0wtjhW.hfW6IP%2BeKBI5zFVcWAnsABFwT2U34VEmEXEC18mKlmE
 
 {
-  "user_id": "646999900e8611c546890db2",
   "categoryName": "Homework",
   "color": "#0000FF",
   "hoursLogged": 10,
@@ -52,9 +53,9 @@ Content-Type: application/json
 
 PUT http://localhost:8080/timer/646c344f73cd3ce246cf5616
 Content-Type: application/json
+Cookie: connect.sid=s%3At3LNKCuuw4ex9kaxiKJWAN7_5e0wtjhW.hfW6IP%2BeKBI5zFVcWAnsABFwT2U34VEmEXEC18mKlmE
 
 {
-"user_id": "646999900e8611c546890db2",
 "categoryName": "Homework",
 "color": "#0000FF",
 "hoursLogged": 0,
@@ -67,3 +68,4 @@ Content-Type: application/json
 
 DELETE http://localhost:8080/timer/647d6c4eae1f7f676bf22fec
 Content-Type: application/json
+Cookie: connect.sid=s%3At3LNKCuuw4ex9kaxiKJWAN7_5e0wtjhW.hfW6IP%2BeKBI5zFVcWAnsABFwT2U34VEmEXEC18mKlmE

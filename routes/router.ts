@@ -26,7 +26,7 @@ router.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
 router.get("/timers", verifyLoggedIn, listAllTimers);
 
-router.post("/timer", verifyLoggedIn, validateTimer(createTimerSchema), createNewTimer);
+router.post("/new-timer", verifyLoggedIn, validateTimer(createTimerSchema), createNewTimer);
 
 router.put("/timer/:id", verifyLoggedIn, validateTimer(updateTimerSchema) , editTimer);
 

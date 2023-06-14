@@ -6,8 +6,8 @@ export const authenticateUser = passport.authenticate('google', {scope: ['email'
 
 export const redirectAuthentication =
     passport.authenticate('google', {
-        successRedirect: "/auth/success",
-        failureRedirect: "/timers"
+        successRedirect: "/timers",
+        failureRedirect: "/"
     })
 
 

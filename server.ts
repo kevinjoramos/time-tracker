@@ -20,7 +20,8 @@ connectToDatabase()
             session({
                 secret: process.env.SECRET_SESSION_CODE,
                 resave: true,
-                saveUninitialized: true
+                saveUninitialized: true,
+
             })
         )
         app.use(passport.initialize())
