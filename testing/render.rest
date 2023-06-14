@@ -1,11 +1,11 @@
 GET https://time-tracker-591z.onrender.com/timers/
-Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
+Cookie: connect.sid=s%3Azdjz92h5g5Hz7t4lDAl8jjDzLrgqFUj7.1yn%2BIJ8AxcmNs%2BaecB5koozb3slnF45uYLkY9Bw62Hc
 
 ###
 
 POST https://time-tracker-591z.onrender.com/new-timer
 Content-Type: application/json
-Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
+Cookie: connect.sid=s%3Azdjz92h5g5Hz7t4lDAl8jjDzLrgqFUj7.1yn%2BIJ8AxcmNs%2BaecB5koozb3slnF45uYLkY9Bw62Hc
 
 {
   "categoryName": "Senior Project",
@@ -16,7 +16,7 @@ Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2F
 
 POST https://time-tracker-591z.onrender.com/new-timer
 Content-Type: application/json
-Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
+Cookie: connect.sid=s%3Azdjz92h5g5Hz7t4lDAl8jjDzLrgqFUj7.1yn%2BIJ8AxcmNs%2BaecB5koozb3slnF45uYLkY9Bw62Hc
 
 {
   "categoryName": "Sleep",
@@ -27,7 +27,7 @@ Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2F
 
 POST https://time-tracker-591z.onrender.com/new-timer
 Content-Type: application/json
-Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
+Cookie: connect.sid=s%3Azdjz92h5g5Hz7t4lDAl8jjDzLrgqFUj7.1yn%2BIJ8AxcmNs%2BaecB5koozb3slnF45uYLkY9Bw62Hc
 
 {
   "categoryName": "Homework",
@@ -38,7 +38,7 @@ Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2F
 
 PUT https://time-tracker-591z.onrender.com/timer/64892c77cc4884e82887ee9a
 Content-Type: application/json
-Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
+Cookie: connect.sid=s%3Azdjz92h5g5Hz7t4lDAl8jjDzLrgqFUj7.1yn%2BIJ8AxcmNs%2BaecB5koozb3slnF45uYLkY9Bw62Hc
 
 {
   "categoryName": "Homework",
@@ -51,9 +51,9 @@ Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2F
 
 ###
 
-PUT https://time-tracker-591z.onrender.com/timer/64892c74cc4884e82887ee99
+PUT https://time-tracker-591z.onrender.com/timer/64894089344c7bd073e2a13e
 Content-Type: application/json
-Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
+Cookie: connect.sid=s%3Azdjz92h5g5Hz7t4lDAl8jjDzLrgqFUj7.1yn%2BIJ8AxcmNs%2BaecB5koozb3slnF45uYLkY9Bw62Hc
 
 {
   "categoryName": "Homework",
@@ -68,4 +68,4 @@ Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2F
 
 DELETE https://time-tracker-591z.onrender.com/timer/64892c74cc4884e82887ee99
 Content-Type: application/json
-Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
+Cookie: connect.sid=s%3Azdjz92h5g5Hz7t4lDAl8jjDzLrgqFUj7.1yn%2BIJ8AxcmNs%2BaecB5koozb3slnF45uYLkY9Bw62Hc
