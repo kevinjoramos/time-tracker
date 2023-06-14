@@ -8,10 +8,35 @@
   "host": "time-tracker-591z.onrender.com",
   "basePath": "/",
   "schemes": [
-    "https",
-    "http"
+    "http",
+    "https"
   ],
   "paths": {
+    "/auth/google": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/auth/google/callback": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/auth/logout": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api-docs": {
       "get": {
         "description": "",
@@ -19,23 +44,16 @@
         "responses": {}
       }
     },
-    "/timers/{userId}": {
+    "/timers": {
       "get": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "user_id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
+        "description": "Lists all timers belonging to the user. Route is protected via authentication.",
+        "parameters": [],
         "responses": {
           "201": {
             "description": "Created"
           },
-          "422": {
-            "description": "Unprocessable Entity"
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -43,9 +61,9 @@
         }
       }
     },
-    "/timer": {
+    "/new-timer": {
       "post": {
-        "description": "",
+        "description": "Creates a new timer assigned to the user. Route is protected via authentication.",
         "parameters": [
           {
             "name": "body",
@@ -53,9 +71,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "user_id": {
-                  "example": "646999900e8611c546890db2"
-                },
                 "categoryName": {
                   "example": "Homework"
                 },
@@ -73,6 +88,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "422": {
             "description": "Unprocessable Entity"
           },
@@ -84,7 +102,7 @@
     },
     "/timer/{id}": {
       "put": {
-        "description": "",
+        "description": "Replaces an existing timer belonging to the user. Route is protected via authentication.",
         "parameters": [
           {
             "name": "id",
@@ -98,9 +116,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "user_id": {
-                  "example": "646999900e8611c546890db2"
-                },
                 "categoryName": {
                   "example": "Homework"
                 },
@@ -133,13 +148,16 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "422": {
             "description": "Unprocessable Entity"
           }
         }
       },
       "delete": {
-        "description": "",
+        "description": "Deletes a timer belonging to the user. Route is protected via authentication.",
         "parameters": [
           {
             "name": "id",
@@ -155,11 +173,11 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "404": {
             "description": "Not Found"
-          },
-          "422": {
-            "description": "Unprocessable Entity"
           }
         }
       }
