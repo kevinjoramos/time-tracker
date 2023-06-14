@@ -8,8 +8,8 @@
   "host": "time-tracker-591z.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http",
-    "https"
+    "https",
+    "http"
   ],
   "paths": {
     "/auth/google": {
