@@ -1,6 +1,7 @@
 import Joi from "joi";
 import {Request, Response, NextFunction} from "express";
 
+const objectIdRegExp = /^[a-f\d]{24}$/i
 const hexColorRegExp = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/
 
 export const createTimerSchema = Joi.object({
@@ -38,8 +39,10 @@ export const updateTimerSchema = Joi.object({
 })
 
 export const deleteTimerSchema = Joi.object({
-    timer_id: Joi
+    id: Joi
         .string()
+        .pattern(objectIdRegExp)
+        .error(() => "Must be a valid objectId")
         .required(),
 })
 
