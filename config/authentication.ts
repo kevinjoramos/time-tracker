@@ -19,7 +19,8 @@ passport.deserializeUser((user, done) => {
 passport.use(<passport.Strategy>new GoogleStrategy({
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: "http://localhost:8080/auth/google/callback",
+        // FOR TESTING callbackURL: "http://localhost:8080/auth/google/callback",
+        callbackURL: "https://time-tracker-591z.onrender.com/auth/google",
         passReqToCallback: true
     },
     async (request, accessToken, refreshToken, profile, done) => {
