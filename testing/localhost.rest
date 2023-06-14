@@ -1,11 +1,11 @@
 GET http://localhost:8080/timers/
-Cookie: connect.sid=s%3At3LNKCuuw4ex9kaxiKJWAN7_5e0wtjhW.hfW6IP%2BeKBI5zFVcWAnsABFwT2U34VEmEXEC18mKlmE
+Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
 
 ###
 
 POST http://localhost:8080/new-timer
 Content-Type: application/json
-Cookie: connect.sid=s%3At3LNKCuuw4ex9kaxiKJWAN7_5e0wtjhW.hfW6IP%2BeKBI5zFVcWAnsABFwT2U34VEmEXEC18mKlmE
+Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
 
 {
   "categoryName": "Senior Project",
@@ -16,7 +16,7 @@ Cookie: connect.sid=s%3At3LNKCuuw4ex9kaxiKJWAN7_5e0wtjhW.hfW6IP%2BeKBI5zFVcWAnsA
 
 POST http://localhost:8080/new-timer
 Content-Type: application/json
-Cookie: connect.sid=s%3At3LNKCuuw4ex9kaxiKJWAN7_5e0wtjhW.hfW6IP%2BeKBI5zFVcWAnsABFwT2U34VEmEXEC18mKlmE
+Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
 
 {
   "categoryName": "Sleep",
@@ -27,7 +27,7 @@ Cookie: connect.sid=s%3At3LNKCuuw4ex9kaxiKJWAN7_5e0wtjhW.hfW6IP%2BeKBI5zFVcWAnsA
 
 POST http://localhost:8080/new-timer
 Content-Type: application/json
-Cookie: connect.sid=s%3At3LNKCuuw4ex9kaxiKJWAN7_5e0wtjhW.hfW6IP%2BeKBI5zFVcWAnsABFwT2U34VEmEXEC18mKlmE
+Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
 
 {
   "categoryName": "Homework",
@@ -36,9 +36,9 @@ Cookie: connect.sid=s%3At3LNKCuuw4ex9kaxiKJWAN7_5e0wtjhW.hfW6IP%2BeKBI5zFVcWAnsA
 
 ###
 
-PUT http://localhost:8080/timer/646c344f73cd3ce246cf5616
+PUT http://localhost:8080/timer/64892c77cc4884e82887ee9a
 Content-Type: application/json
-Cookie: connect.sid=s%3At3LNKCuuw4ex9kaxiKJWAN7_5e0wtjhW.hfW6IP%2BeKBI5zFVcWAnsABFwT2U34VEmEXEC18mKlmE
+Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
 
 {
   "categoryName": "Homework",
@@ -51,9 +51,9 @@ Cookie: connect.sid=s%3At3LNKCuuw4ex9kaxiKJWAN7_5e0wtjhW.hfW6IP%2BeKBI5zFVcWAnsA
 
 ###
 
-PUT http://localhost:8080/timer/646c344f73cd3ce246cf5616
+PUT http://localhost:8080/timer/64892c74cc4884e82887ee99
 Content-Type: application/json
-Cookie: connect.sid=s%3At3LNKCuuw4ex9kaxiKJWAN7_5e0wtjhW.hfW6IP%2BeKBI5zFVcWAnsABFwT2U34VEmEXEC18mKlmE
+Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
 
 {
 "categoryName": "Homework",
@@ -66,6 +66,6 @@ Cookie: connect.sid=s%3At3LNKCuuw4ex9kaxiKJWAN7_5e0wtjhW.hfW6IP%2BeKBI5zFVcWAnsA
 
 ###
 
-DELETE http://localhost:8080/timer/647d6c4eae1f7f676bf22fec
+DELETE http://localhost:8080/timer/64892c74cc4884e82887ee99
 Content-Type: application/json
-Cookie: connect.sid=s%3At3LNKCuuw4ex9kaxiKJWAN7_5e0wtjhW.hfW6IP%2BeKBI5zFVcWAnsABFwT2U34VEmEXEC18mKlmE
+Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14

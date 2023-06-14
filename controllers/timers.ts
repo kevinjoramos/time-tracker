@@ -46,6 +46,7 @@ export const editTimer = async (request: Request, response: Response) => {
 
     try {
         const updatedTimer: Timer = request.body as Timer;
+        updatedTimer.user_id = new ObjectId(user_id)
         const query = {
             user_id: new ObjectId(user_id),
             _id: new ObjectId(id),

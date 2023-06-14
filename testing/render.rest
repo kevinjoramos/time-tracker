@@ -1,47 +1,46 @@
-
-GET https://time-tracker-591z.onrender.com/timers/646999900e8611c546890db2
-Content-Type: application/json
+GET https://time-tracker-591z.onrender.com/timers/
+Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
 
 ###
 
-POST https://time-tracker-591z.onrender.com/timer
+POST https://time-tracker-591z.onrender.com/new-timer
 Content-Type: application/json
+Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
 
 {
-  "user_id": "646999900e8611c546890db2",
   "categoryName": "Senior Project",
   "color": "#0000FF"
 }
 
 ###
 
-POST https://time-tracker-591z.onrender.com/timer
+POST https://time-tracker-591z.onrender.com/new-timer
 Content-Type: application/json
+Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
 
 {
-  "user_id": "646999900e8611c546890db2",
   "categoryName": "Sleep",
   "color": "#0000FF"
 }
 
 ###
 
-POST https://time-tracker-591z.onrender.com/timer
+POST https://time-tracker-591z.onrender.com/new-timer
 Content-Type: application/json
+Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
 
 {
-  "user_id": "646999900e8611c546890db2",
   "categoryName": "Homework",
   "color": "#0000FF"
 }
 
 ###
 
-PUT https://time-tracker-591z.onrender.com/timer/647d75fa7c1f34ac0de06017
+PUT https://time-tracker-591z.onrender.com/timer/64892c77cc4884e82887ee9a
 Content-Type: application/json
+Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
 
 {
-  "user_id": "646999900e8611c546890db2",
   "categoryName": "Homework",
   "color": "#0000FF",
   "hoursLogged": 10,
@@ -52,11 +51,11 @@ Content-Type: application/json
 
 ###
 
-PUT https://time-tracker-591z.onrender.com/timer/646999900e8611c546890db2
+PUT https://time-tracker-591z.onrender.com/timer/64892c74cc4884e82887ee99
 Content-Type: application/json
+Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
 
 {
-  "user_id": "646999900e8611c546890db2",
   "categoryName": "Homework",
   "color": "#0000FF",
   "hoursLogged": 0,
@@ -67,11 +66,6 @@ Content-Type: application/json
 
 ###
 
-DELETE https://time-tracker-591z.onrender.com/timer/647d75fa7c1f34ac0de06017
+DELETE https://time-tracker-591z.onrender.com/timer/64892c74cc4884e82887ee99
 Content-Type: application/json
-
-{
-  "user_id": "6476ceeaad3c55ec6fda54f6"
-}
-
-
+Cookie: connect.sid=s%3ADJLBZEOb7Kyan60RjR8YO8H1Kuem-i4f.W7Rjw6JwOTUZa2zVOLJJ%2FmYQWJEtos6o%2BAfmJybx%2F14
