@@ -30,4 +30,4 @@ router.post("/new-timer", verifyLoggedIn, validateTimer(createTimerSchema), crea
 
 router.put("/timer/:id", verifyLoggedIn, validateTimer(updateTimerSchema) , editTimer);
 
-router.delete("/timer/:id", verifyLoggedIn, validateTimer(deleteTimerSchema), deleteTimer)
+router.delete("/timer/:id", verifyLoggedIn, deleteTimer)
